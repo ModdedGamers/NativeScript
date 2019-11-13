@@ -472,6 +472,10 @@ export class Frame extends FrameBase {
     }
 
     public createNativeView() {
+        if (this._currentEntry) {
+            this._pushInFrameStack();
+        }
+
         return new org.nativescript.widgets.ContentLayout(this._context);
     }
 
