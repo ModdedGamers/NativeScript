@@ -58,9 +58,5 @@ export class HtmlView extends HtmlViewBase {
             <any>{ [NSDocumentTypeDocumentAttribute]: NSHTMLTextDocumentType },
             null
         );
-
-        if (majorVersion >= 13 && UIColor.labelColor) {
-            this.nativeViewProtected.textColor = UIColor.labelColor;
-        }
     }
 }
